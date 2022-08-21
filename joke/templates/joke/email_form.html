@@ -1,0 +1,31 @@
+{% extends "joke/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="whole">
+        <div class="text-body first">
+            <p>Are the bugs bugging you?</p>
+        </div>
+        <div class="form-details">
+            <div class="form-details2">
+                <div class="form-text">
+                    <p> SUBSCRIBE TO A JOKE DAILY!</p>
+                </div>
+                <div class="f">
+                    <form method="POST">
+                        {% csrf_token%}
+                        <fieldset class="f">
+                            <legend class=""> Enter Email</legend>
+                            {{form|crispy}}
+                        </fieldset>
+                        <div class="fo">
+                            <button class="btn btn-outline-info" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="text-body last" >
+            <p> A smile 😃 a day keeps the bug away</p>
+        </div>
+    </div>
+{% endblock content%}
