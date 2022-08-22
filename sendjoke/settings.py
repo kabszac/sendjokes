@@ -143,6 +143,11 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 #celery
 CELERY_BROKER_URL = os.getenv("REDIS_URL")
 CELERY_TIMEZONE = 'Africa/Nairobi'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_BACKEND = 'django-db'
+
 
 #celery beat
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
