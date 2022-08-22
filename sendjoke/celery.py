@@ -20,7 +20,7 @@ app.conf.update(timezone= 'Africa/Nairobi')
 app.conf.beat_schedule = {
     "send-mail-after- 10- min":{
         'task': 'joke.tasks.send_mail_func',
-        'schedule': crontab(minute='*/10')
+        'schedule': crontab(minute=0, hour=0)
     }
 
 }
