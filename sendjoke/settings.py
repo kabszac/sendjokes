@@ -45,13 +45,13 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",
     'django_celery_results',
     'django_celery_beat',
-    #'corsheaders',
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-   # "corsheaders.middleware.CorsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -60,9 +60,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# CORS_ALLOWED_ORIGINS = [
-#     'https://web-production-93c6.up.railway.app/',
-# ]
+CORS_ALLOWED_ORIGINS = [
+    'https://web-production-93c6.up.railway.app/',
+]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://web-production-93c6.up.railway.app/'
