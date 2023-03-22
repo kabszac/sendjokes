@@ -61,7 +61,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://web-production-93c6.up.railway.app/',
+    'https://web-production-93c6.up.railway.app',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
